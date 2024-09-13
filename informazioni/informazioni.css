@@ -1,0 +1,323 @@
+/* Font per testo sidebar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Transizioni */
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+/* Stili per la classe body */
+body {
+    height: 100%;
+    background-color: #4b4b4b;
+}
+
+/* Stili per la classe sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background-color: #1f1f1f;
+    transition: var(--tran-05);
+    z-index: 100;
+}
+
+.sidebar.close {
+    width: 88px;
+}
+
+.sidebar.close .text {
+    opacity: 0;
+}
+
+.sidebar.close header .toggleArrow {
+    transform: translateY(-50%);
+}
+
+.sidebar li {
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li .icona {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+
+.sidebar li .icona,
+.sidebar li .text {
+    color: #dadada;
+    transition: var(--tran-02);
+}
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar .text {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    transition: var(--tran-04);
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar .image {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .image-sidebar img {
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar header .image-sidebar {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar header .toggleArrow {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background: #D65200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: var(--tran-03);
+}
+
+.sidebar li a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.nav-link:nth-child(4) a {
+    width: 100%;
+    height: 100%;
+    background: #D65200;
+}
+
+.sidebar li a:hover {
+    background: #2e2e2e;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-link:nth-child(4) a:hover {
+    background: #D65200;
+}
+
+.sidebar li a:hover .icona,
+.sidebar li a:hover .text {
+    color: #ffffff;
+}
+
+.sidebar .menu-bar {
+    height: calc(100% - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar~.informazioni {
+    left: 250px; /* Imposta la posizione quando la sidebar è aperta */
+    width: calc(100% - 250px); /* Imposta la larghezza quando la sidebar è aperta */
+}
+
+.sidebar.close~.informazioni {
+    left: 88px; /* Imposta la posizione quando la sidebar è chiusa */
+    width: calc(100% - 88px); /* Imposta la larghezza quando la sidebar è chiusa */
+}
+
+/* Stili per la classe informazioni */
+.informazioni {
+    left: 250px;
+    position: relative;
+    transition: var(--tran-05);
+    display: flex;
+    flex-direction: column;
+}
+
+.informazioni .text {
+    font-size: 30px;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 8px 40px 0px;
+}
+
+.informazioni .titolo-info {
+    color: #db824a;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 8px 40px 0px;
+}
+
+.informazioni .text-info {
+    font-size: 20px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 1px 50px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex: 1;
+}
+
+.informazioni .mail-info {
+    font-size: 20px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 1px 50px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex: 1;
+}
+
+.foto-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 40px;
+}
+
+.foto {
+    flex: 1 1 30%;
+    margin-right: 1px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.foto:last-child {
+    margin-right: 0;
+}
+
+.foto img {
+    height: 300px;
+    width: auto;
+}
+
+.descrizione {
+    font-size: 12px;
+    color: #dbdada;
+    margin-top: 5px; /* Aggiunge spazio tra l'immagine e la descrizione */
+}
+
+/* Stili per il layout per Computer */
+@media only screen and (min-width: 769px) {
+    .menu-telefono{
+        display: none; /* Navbar per dispositivo mobile non visualizzabile */
+    }
+}
+
+/* Stili per il layout per dispositivo mobile */
+@media only screen and (max-width: 768px) {
+    .foto-container {
+        flex-direction: column; /* Imposta la disposizione delle foto in colonna */
+    }
+
+    .foto {
+        margin-right: 0; /* Rimuove il margine tra le foto */
+        margin-bottom: 20px; /* Aggiunge spazio tra le foto */
+    }
+
+    .sidebar {
+        width: 0; /* Imposta la larghezza della sidebar su 0 */
+        display: none; /* Sidebar per PC non visualizzabile */
+    }
+
+    .sidebar.close {
+        display: none; /* Nasconde la sidebar quando è chiusa */
+    }
+
+    .sidebar ~ .informazioni {
+        left: 0; /* Posiziona le informazioni a sinistra quando la sidebar è aperta */
+        width: 100%; /* Imposta la larghezza delle informazioni al 100% quando la sidebar è aperta */
+    }
+
+    .sidebar.close ~ .informazioni {
+        left: 0; /* Posiziona le informazioni a sinistra quando la sidebar è chiusa */
+        width: 100%; /* Imposta la larghezza delle informazioni al 100% quando la sidebar è chiusa */
+    }
+
+    .informazioni .text {
+        font-size: 25px;
+    }
+
+    .informazioni .titolo-info {
+        font-size: 20px;
+    }
+    
+    .informazioni .text-info {
+        font-size: 17px;
+    }
+
+    .informazioni .mail-info {
+        font-size: 11.5px;
+    }
+
+    /* Menu Solo per dispositivo mobile */
+    .menu-telefono{
+        background: #1f1f1f;
+        height: 52px;
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .menu-telefono ul{
+        position: relative;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+    }
+
+    .menu-telefono ul li{
+        float: left;
+        width: 20%;
+        text-align: center;
+    }
+
+    .menu-telefono ul li a{
+        display: block;
+        text-decoration: none;
+        color: #dadada;
+        padding: 15px;
+        border-radius: 6px;
+    }
+
+    .menu-telefono ul li .icona{
+        scale: 2;
+    }
+}

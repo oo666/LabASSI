@@ -1,0 +1,756 @@
+/* Font per testo sidebar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Transizioni */
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+body{
+    height: 100vh;
+    background-color: #4b4b4b;
+}
+
+/* Sidebar */
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background-color: #1f1f1f;
+    transition: var(--tran-05);
+    z-index: 100;
+}
+
+.sidebar.close{
+    width: 88px;
+}
+
+.sidebar.close .text{
+    opacity: 0;
+}
+
+.sidebar.close header .toggleArrow{
+    transform: translateY(-50%);
+}
+
+.sidebar li{
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li .icona{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+
+.sidebar li .icona,
+.sidebar li .text{
+    color:#dadada;
+    transition: var(--tran-02);
+}
+
+.sidebar header{
+    position: relative;
+}
+
+.sidebar .text{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    transition: var(--tran-04);
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar .image{
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .image-sidebar img{
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar header .image-sidebar{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar header .toggleArrow{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background: #D65200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: var(--tran-03);
+}
+
+.sidebar li a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.nav-link:nth-child(2) a{
+    width: 100%;
+    height: 100%;
+    background: #D65200;
+}
+
+.sidebar li a:hover{
+    background: #2e2e2e;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-link:nth-child(2) a:hover {
+    background: #D65200;
+}
+
+.sidebar li a:hover .icona,
+.sidebar li a:hover .text{
+    color: #ffffff;
+}
+
+.sidebar .menu-bar{
+    height: calc(100% - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.area-personale{
+    height: 100vh;
+    left: 250px;
+    position: relative;
+    width: calc(100% - 250px);
+    transition: var(--tran-05);
+    background:#4b4b4b;
+}
+
+.area-personale .text{
+    font-size: 30px;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 8px 40px;
+}
+
+.sidebar.close ~ .area-personale{
+    left: 88px;
+    width: calc(100% - 88px);
+}
+
+
+
+
+/* Form Profilo */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+  }
+
+  .form-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #1a1a1a00;
+    color: #fff;
+    border: 1px solid #33333300;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #D65200;
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .title::before,
+  .title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #D65200;
+  }
+  
+  .message, 
+  .signin {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .signin {
+    text-align: center;
+  }
+  
+  .signin a:hover {
+    text-decoration: underline #D65200;
+  }
+  
+  .signin a {
+    color: #D65200;
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  
+  .form label .input + span {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input:placeholder-shown + span {
+    top: 0px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input:focus + span,
+  .form label .input:valid + span {
+    color: #D65200;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .input {
+    font-size: medium;
+  }
+  
+
+  
+  .submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    background-color: #D65200;
+    margin-top: 10px;
+  }
+  
+  .submit:hover {
+    background-color: #a13e00;
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+  .input-username input[type=text][placeholder=] {
+    height: 50px;
+  }
+
+  .input-bio input[type="text"][placeholder=""] {
+    margin-top: 10px;
+    height: 180px; /* Imposta l'altezza del campo Bio */
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word; /* Aggiunge un'interruzione di riga quando necessario */
+    resize: none;
+
+}
+
+
+.textarea {
+  margin-top: 18px;
+  width: 100%;
+  max-width: 100%;
+  height: 180px; /* Altezza iniziale desiderata */
+  min-height: 180px; /* Altezza minima */
+  max-height: 180px; /* Altezza massima */
+  min-width: 180px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  resize: none; /* Rimuove il ridimensionamento */    
+}
+
+.textarea::placeholder {
+  color: #888888; /* Cambia il colore del testo del placeholder */
+  opacity: 1; /* Assicura che il placeholder sia visibile */
+}
+
+.input-bio textarea::placeholder {
+  text-align: center; /* Centra il testo del placeholder */
+}
+
+.input-bio span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-0%, -50%); /* Centra la scritta "Bio" */
+  color: #888888; /* Cambia il colore della scritta */
+  pointer-events: none; /* Assicura che la scritta non sia cliccabile */
+}
+
+.input-username span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-0%, -70%); /* Centra la scritta "Bio" */
+  color: #888888; /* Cambia il colore della scritta */
+  pointer-events: none; /* Assicura che la scritta non sia cliccabile */
+}
+
+#characterCount {
+  color: #888888; /* Cambia questo colore con quello desiderato */
+  font-size: 10px; /* Opzionale: modifica la dimensione del testo se necessario */
+  transform: translate(3%, 0%); /* Centra la scritta */
+}
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+}
+
+.form-container {
+    width: 100%;
+    height: 100%;
+    min-width:500px;
+    min-height: auto;
+    border-radius: 8px;
+    
+}
+
+.form-container:first-child {
+    margin-right: 35px; /* Aggiunge spazio vuoto a destra del primo form */
+}
+
+
+/*griglia*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide la griglia in due colonne */
+    gap: 20px; /* Aggiunge uno spazio tra le colonne */
+}
+
+.grid-item {
+    width: 100%;
+}
+
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/*carica foto*/
+
+.custum-file-upload {
+    height: 100%;
+    width: 100%;
+    max-height: 250px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #e8e8e8;
+    background-color: #212121;
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .custum-file-upload .icon {
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .icon svg {
+    height: 125px;
+    fill: #e8e8e8;
+  }
+  
+  .custum-file-upload .text {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .text span {
+    font-weight: 400;
+    color: #e8e8e8;
+  }
+  
+  .custum-file-upload input {
+    display: none;
+  }
+
+  /*informazioni*/
+
+  .gender-box{
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .gender-option{
+    display: flex;
+    padding: 5px;
+    gap: 15px;
+    color: rgba(255, 255, 255, 0.808);;
+    font-size: 14.25px;
+  }
+  
+  .gender input {
+    accent-color: #D65200;
+  }
+
+
+  .form-info label {
+    flex-grow: 1;
+    position: relative;
+    
+  }
+  
+  .form-info label .input {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  
+  .form-info label .input + span {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form-info label .input:placeholder-shown + span {
+    top: 12.5px;
+    font-size: 0.9em;
+  }
+  
+  .form-info label .input:focus + span,
+  .form-info label .input:valid + span {
+    color: #D65200;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .input {
+    font-size: medium;
+  }
+  
+
+  .info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+}
+
+.form-info-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-info label .input[readonly] {
+    cursor: default;
+}
+
+.gender-option input[readonly] {
+    cursor: default;
+    pointer-events: none;
+}
+
+
+
+
+#quiz {
+  margin-top: 20px;
+}
+
+#question {
+  height: 60px;
+  background-color: #333333;
+}
+
+
+.text-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: #1a1a1a;
+  color: #000;
+  border-radius: 10px;
+  
+}
+
+.text-input input[type="text-correct"] {
+  background-color: #1f1f1f;
+  padding: 14px;
+  margin: 8px 0;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 2px solid green;
+  color: #fff;
+  transition: .3s ease;
+}
+
+.text-input input[type="text-correct"]:hover {
+  background-color: rgba(0, 128, 0, 0.23);
+  border: 2px solid green;
+}
+
+.text-input input[type="text-correct"]:focus {
+  border: 2px solid green;
+  color: rgb(255, 255, 255);
+}
+
+.text-input input[type="text"] {
+  background-color: #1f1f1f;
+  padding: 14px;
+  margin: 8px 0;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid red;
+  color: #fff;
+  transition: .3s ease;
+}
+
+.text-input input[type="text"]:hover {
+  background-color: rgba(255, 0, 0, 0.216);
+  border: 1px solid red;
+}
+
+.text-input input[type="text"]:focus {
+  border: 1px solid red;
+  color: rgb(255, 255, 255);
+}
+
+/* Stili per il layout mobile */
+@media only screen and (min-width: 769px) {
+  .menu-telefono{
+      display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar{
+      width: 0;
+      display: none;
+  }
+
+  .sidebar.close {
+      display: none; /* Nasconde la sidebar quando è chiusa */
+  }
+
+  .sidebar ~ .area-personale{
+      left: 0; /* Posiziona le informazioni a sinistra quando la sidebar è aperta */
+      width: 100%; /* Imposta la larghezza delle informazioni al 100% quando la sidebar è aperta */
+  }
+
+  .sidebar.close ~ .area-personale{
+      left: 0; /* Posiziona le informazioni a sinistra quando la sidebar è chiusa */
+      width: 100%; /* Imposta la larghezza delle informazioni al 100% quando la sidebar è chiusa */
+  }
+
+  /* Menu Solo per dispositivo mobile */
+  .menu-telefono{
+      background: #1f1f1f;
+      height: 52px;
+      width: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+  }
+
+  .menu-telefono ul{
+      position: relative;
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+  }
+
+  .menu-telefono ul li{
+      float: left;
+      width: 20%;
+      text-align: center;
+  }
+
+  .menu-telefono ul li a{
+      display: block;
+      text-decoration: none;
+      color: #dadada;
+      padding: 15px;
+      border-radius: 6px;
+  }
+
+  .menu-telefono ul li .icona{
+      scale: 2;
+  }
+
+
+  .container {
+    display: block;
+  }
+
+  .form-container {
+  
+    min-width:100px;
+    min-height: auto;
+  
+}
+
+.grid-container {
+  grid-template-columns: 1fr;
+}
+ 
+}
+
+/* Stili per il bottone Condividi su Facebook */
+.shareButton {
+  background-color: #4267B2; /* Colore blu di Facebook */
+  color: white; /* Colore del testo */
+  border: none; /* Nessun bordo */
+  border-radius: 8px; /* Bordi arrotondati */
+  padding: 10px 20px; /* Spaziatura interna */
+  font-size: 16px; /* Dimensione del testo */
+  cursor: pointer; /* Cursore a mano per indicare cliccabile */
+  transition: background-color 0.3s ease; /* Transizione per effetto hover */
+}
+
+.shareButton:hover {
+  background-color: #365899; /* Colore blu scuro quando si passa sopra con il mouse */
+}
+
+/* Stile per il riquadro dell'oroscopo */
+.oroscopo-container {
+  background-color: #1a1a1a; /* Colore di sfondo del riquadro */
+  border: 1px solid #333; /* Bordi del riquadro */
+  border-radius: 10px; /* Angoli arrotondati */
+  padding: 20px; /* Spaziatura interna */
+  margin-top: 20px; /* Spazio sopra il riquadro */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+  color: #fff; /* Colore del testo */
+}
+
+.oroscopo-container h3 {
+  font-size: 20px; /* Dimensione del titolo */
+  font-weight: 600; /* Peso del font */
+  margin-bottom: 10px; /* Spazio sotto il titolo */
+}
+
+.oroscopo-container p {
+  font-size: 16px; /* Dimensione del testo */
+  line-height: 1.5; /* Altezza della linea */
+  color: #ccc; /* Colore del testo */
+}

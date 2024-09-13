@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <title> Sprotz! Registrati </title>
+        
+        <!-- Metatag Viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="/Sprotz/registrati/registrati.css">
+    
+        <!-- BoxIcons per CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+        <!-- LOGO -->
+        <link rel="icon" type="image/png" href="LOGO.png">
+    </head>
+
+    <body class="body">
+        <!-- PopUp di avviso errore -->
+        <div class="warning" id="popup" style="display: none;">
+            <div class="warning__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none"><path fill="#393a37" d="m13 14h-2v-5h2zm0 4h-2v-2h2zm-12 3h22l-11-19z"></path></svg>
+            </div>
+            <!-- Testo di errore (in base all'errore, con l'utilizzo di js uscirà un testo diverso) -->
+            <div class="warning__title">lorem ipsum dolor sit amet</div>
+            <div class="warning__close" onclick="hidePopup()"><svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" height="20"><path fill="#393a37" d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"></path></svg></div>
+        </div>
+
+        <!-- Form di registrazione (registrati.php elaborerà i dati) -->
+        <form action="registrati.php" method="post" class="form" id="registrazione">
+            <!-- Logo sito -->
+            <label>
+                <img class="img" src="SPROTZ.png" alt="Logo">
+            </label>
+            <!-- Titolo e sottotitolo -->
+            <p class="title">Registrati </p>
+            <p class="message">Registrati ora ed avrai completo accesso al nostro sito web. </p>
+            <!-- Flexbox per inserimento nome e cognome -->
+            <div class="flex">
+                <label>
+                    <input type="text" id="nome" name="nome" class="input" placeholder="" required>
+                    <span>Nome</span>
+                </label>
+
+                <label>
+                    <input type="text" id="cognome" name="cognome" class="input" placeholder="" required>
+                    <span>Cognome</span>
+                </label>
+            </div>  
+            
+            <!-- Data di nascita -->
+            <label>
+                <input type="date" id="dataNascita" name="dataNascita" class="input" placeholder="" required>
+                <span>Data Nascita</span>
+            </label>
+            
+            <!-- Box per la scelta del sesso (tipo radio, si può scegliere solo una delle tre opzioni) -->
+            <div class="gender-box">
+                <label>Sesso</label>
+                <div class="gender-option">
+                <div class="gender">
+                    <input checked="" name="gender" id="check-male" type="radio" value="M">
+                    <label for="check-male">Maschio</label>
+                </div>
+                <div class="gender">
+                    <input name="gender" id="check-female" type="radio" value="F">
+                    <label for="check-female">Femmina</label>
+                </div>
+                <div class="gender">
+                    <input name="gender" id="check-other" type="radio" value="A">
+                    <label for="check-other">Altro</label>
+                </div>
+                </div>
+            </div>
+
+            <!-- Campo email -->
+            <label>
+                <input type="email" id="email" name="email" class="input" placeholder="" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                <span>Email</span>
+            </label> 
+            
+            <!-- Campo password e confermaPassword -->
+            <label>
+                <input type="password" id="password1" name="password1" class="input" placeholder="" required>
+                <span>Password</span>
+            </label>
+            
+            <label>
+                <input type="password" id="confermaPassword" class="input" placeholder="" required>
+                <span>Conferma password</span>
+            </label>
+
+            <!-- Link per chi ha già un account -->
+            <p class="signin">Hai già un account? <a href="/Sprotz/accedi/accedi.html">Accedi</a> </p>
+
+            <div class="overlay" id="overlay"></div>
+
+            <!-- Pulsante per inviare la registrazione -->
+            <button class="submit" id="invia" type="submit" form="registrazione" value="Registrati">Registrati</button>
+
+        </form>
+        
+        <!-- Audio di errore per quando esce il popup -->
+        <audio id="audio-error">
+            <source src="error-sound.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Script JavaScript -->
+        <script src="registrati.js"></script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "require-dev": {
+        "phpunit/phpunit": "10",
+        "codeception/codeception": "^5.1",
+        "codeception/module-phpbrowser": "*",
+        "codeception/module-asserts": "*",
+        "codeception/module-webdriver": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Support\\": "tests/Support/",
+            "Tests\\": "tests/"
+        }
+    }
+}

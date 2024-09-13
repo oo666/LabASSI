@@ -1,0 +1,1 @@
+{"version":1,"defects":{"SubmitTest::testAggiuntaAiContatti":8,"SubmitTest::testAggiuntaAllaListaNera":8},"times":{"SubmitTest::testAggiuntaAiContatti":0.034,"SubmitTest::testAggiuntaAllaListaNera":0,"QuizTest::testGetCorrectAnswer":0.009,"QuizTest::testCheckAnswer":0.003}}
