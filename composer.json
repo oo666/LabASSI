@@ -9,7 +9,8 @@
     "autoload": {
         "psr-4": {
             "Support\\": "tests/Support/",
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "Tests\\Support\\_generated\\": "tests/Support/_generated/"
         }
     }
 }

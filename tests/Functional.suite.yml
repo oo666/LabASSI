@@ -8,10 +8,4 @@
 actor: FunctionalTester
 modules:
     enabled:
-        - WebDriver:
-            url: http://localhost/Sprotz
-            browser: chrome
-            host: 127.0.0.1
-            port: 4444
-            restart: true
-        - Support\Helper\Functional
+

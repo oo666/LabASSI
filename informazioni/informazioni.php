@@ -179,34 +179,11 @@ if (mysqli_num_rows($result) > 0) {
     <section class="informazioni">
         <!-- Titolo sezione -->
         <div class="text">Chi siamo</div>
-        <!-- Sottotolo (si ripete successivamente con la stessa classe)-->
-        <div class="titolo-info">Su di noi</div>
-        <!-- Testo del sottotitolo (si ripete successivamente con la stessa classe)-->
-        <div class="text-info">Ciao! Siamo noi i creatori di Sprotz! Ci chiamiamo Clelia Bernardo, Giovanni Cassino e
-            Gaetano Morello, abbiamo 21 anni e siamo iscritti al terzo anno del corso di Ingegneria Informatica
-            all'Università di Roma "La Sapienza".
-            Ci siamo conosciuti al primo anno di Università, grazie al fatto che participavamo agli stessi corsi e
-            facevamo parte dello stesso canale. Complice di questo rapporto è anche la provenienza, visto che tutti e
-            tre siamo fuorisede provenienti dalla Basilicata e dalla Campania.
-        </div>
-        <!-- Container delle foto e descrizioni di noi creatori del sito-->
-        <div class="foto-container">
-            <div class="foto">
-                <img src="Clelia.jpg" alt="Foto Clelia">
-                <p class="descrizione">Clelia Bernardo</p>
-            </div>
-            <div class="foto">
-                <img src="Giovanni.jpg" alt="Foto Giovanni">
-                <p class="descrizione">Giovanni Cassino</p>
-            </div>
-            <div class="foto">
-                <img src="Gaetano.jpg" alt="Foto Gaetano">
-                <p class="descrizione">Gaetano Morello</p>
-            </div>
-        </div>
+        
+        
         <div class="titolo-info">L'idea</div>
-        <div class="text-info">Abbiamo ideato questo sito web come progetto per il corso di "Linguaggi e Tecnologie per
-            il Web", esame a scelta del nostro corso di laurea.
+        <div class="text-info">Il sito web è stato ideato come progetto per il laboratorio di "Applicazioni Software e
+            Sicurezza Informatica".
             L'idea è nata durante le lezioni del corso stesso, pensando a qualcosa di innovativo e di divertente da
             poter implementare all'interno del sito.
             Da qui l'idea di un sito di interazioni e conoscenza di nuove persone grazie ad un approccio particolare, i
